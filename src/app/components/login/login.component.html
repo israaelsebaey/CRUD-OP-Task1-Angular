@@ -1,0 +1,51 @@
+<section class="login-component">
+    <div class="container bg-white shadow-lg p-0">
+        <div class="row">
+            <div class="col-6">
+                <div class="login-imgs d-lg-block d-none postion-relative">
+                    <img [src]="loginIms.waveImg" class="wave-img"/>
+                    <img [src]="loginIms.bgImg"   class="bg-img position-absolute"/>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="login-content d-flex flex-column justify-content-center align-items-center">
+                    <div class="row">
+                        <div class="login-content-img col-12 d-flex justify-content-center align-items-center">
+                            <img [src]="loginIms.avatarImg" class="avatar-img"/>
+                        </div>
+                        <div class="login-content-title col-12 d-flex justify-content-center align-items-center my-3">
+                            <h3 class="text-uppercase fw-bold">welcome</h3>
+                        </div>
+                        <div class="login-content-form col-12 d-flex justify-content-center align-items-center">
+                            <form class="w-75" [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="basic-addon1">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Email" 
+                                    formControlName="account_email" [class.is-invalid]="Email?.invalid && Email?.touched"
+                                    />
+                                </div>
+                                <div class="errors mb-3">
+                                    <small class="text-danger" [class.d-none]="Email?.valid || Email?.untouched">Email is required</small>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="basic-addon1">@</span>
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Password" 
+                                    formControlName="account_password" [class.is-invalid]="Password?.invalid && Password?.touched"
+                                    />
+                                </div>
+                                <div class="errors mb-3">
+                                    <small class="text-danger" [class.d-none]="Password?.valid || Password?.untouched">Password is required</small>
+                                </div>
+                                <button type="submit" class="btn btn-primary mb-3">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

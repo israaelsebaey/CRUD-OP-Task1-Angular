@@ -1,0 +1,45 @@
+.login-component{
+    background-color: #f6f6f6;
+    overflow: hidden;
+    height: 100vh;
+}
+.login-component .container{
+    height: 620px;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+.login-imgs{
+    height: 620px; 
+}
+.login-imgs img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0;
+}
+.login-imgs .bg-img{
+    left: 90px;
+    top: 10px;
+    width: 400px;
+}
+.login-content{
+    height:620px;
+} 
+.login-content .avatar-img{
+   width: 100px;
+   height: 100px;
+}
+.login-content .btn{
+    background-color: #2bc891 !important;
+    border: 1px solid #2bc891 !important;
+    width: 100%;
+    transition: 0.5s;
+}
+.login-content .btn:hover{
+    background-color: transparent !important;
+    color: #2bc891 !important;
+}
+@media (width=1024px) {
+    .login-component .login-content{
+        margin-top: -50px;
+    }
+}
