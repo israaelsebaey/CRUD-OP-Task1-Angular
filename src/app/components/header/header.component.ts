@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
     this.userEmail=localStorage.getItem(JSON.parse('userEmail'))
   }
   Logout(){
-    // localStorage.removeItem('userEmail');
     localStorage.removeItem('token');
     this.router.navigate(['/login']);
   }
