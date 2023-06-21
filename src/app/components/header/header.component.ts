@@ -9,9 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   constructor(private router:Router) { }
-  userEmail:any;
   ngOnInit(): void {
-    this.userEmail=localStorage.getItem(JSON.parse('userEmail'))
   }
   Logout(){
     localStorage.removeItem('token');
